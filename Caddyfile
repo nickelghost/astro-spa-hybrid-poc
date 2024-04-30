@@ -1,0 +1,5 @@
+http://localhost:8080
+
+rewrite /generator/* /generator
+
+reverse_proxy http://web:4321

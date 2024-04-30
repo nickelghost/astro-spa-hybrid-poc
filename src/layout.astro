@@ -1,0 +1,33 @@
+---
+const generatedAt = new Date().toISOString();
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Demo</h1>
+		<p>Generated at: {generatedAt}</p>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/generator">Generator</a>
+    </nav>
+
+		<slot />
+	</body>
+</html>
+
+<script>
+  document.querySelector('body')?.style.setProperty('background-color', 'lightblue');
+
+  setTimeout(() => {
+    document.querySelector('body')?.style.setProperty('background-color', 'white');
+  }, 500);
+</script>
