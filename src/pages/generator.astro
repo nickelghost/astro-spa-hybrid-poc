@@ -1,10 +1,12 @@
 ---
 import Layout from "../layout.astro";
 import GeneratorApp from "../react/GeneratorApp";
+
+const path = Astro.request.headers.get("X-Forwarded-Path") || Astro.url.pathname
 ---
 
 <Layout>
 	<h1>Generator</h1>
 
-  <GeneratorApp client:only />
+  <GeneratorApp client:load path={path} />
 </Layout>

@@ -1,5 +1,9 @@
 http://localhost:8080
 
+vars original_path {path}
+
 rewrite /generator/* /generator
 
-reverse_proxy http://web:4321
+reverse_proxy http://web:4321 {
+	header_up X-Forwarded-Path {vars.original_path}
+}
