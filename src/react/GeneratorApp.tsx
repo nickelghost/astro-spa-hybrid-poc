@@ -3,7 +3,7 @@ import { StaticRouter } from "react-router-dom/server";
 import GeneratorIndex from "./GeneratorIndex";
 import GeneratorResult from "./GeneratorResult";
 
-function Generator({ path }: { path: string }) {
+function GeneratorApp({ path }: { path: string }) {
   const Router = globalThis.window ? BrowserRouter : StaticRouter;
   return (
     <Router location={path}>
@@ -15,4 +15,4 @@ function Generator({ path }: { path: string }) {
   );
 }
 
-export default Generator;
+export default GeneratorApp;
