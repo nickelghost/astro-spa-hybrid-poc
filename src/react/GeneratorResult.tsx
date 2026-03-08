@@ -6,7 +6,7 @@ function GeneratorResult() {
   return (
     <div>
       <h2>Hello {name}!</h2>
-      <Link to="/generator">Back</Link>
+      <Link to="/">Back</Link>
     </div>
   );
 }

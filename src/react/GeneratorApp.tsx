@@ -6,10 +6,10 @@ import GeneratorResult from "./GeneratorResult";
 function GeneratorApp({ path }: { path: string }) {
   const Router = globalThis.window ? BrowserRouter : StaticRouter;
   return (
-    <Router location={path}>
+    <Router basename="/generator" location={path}>
       <Routes>
-        <Route path="/generator" element={<GeneratorIndex />} />
-        <Route path="/generator/:name" element={<GeneratorResult />} />
+        <Route path="/" element={<GeneratorIndex />} />
+        <Route path="/:name" element={<GeneratorResult />} />
       </Routes>
     </Router>
   );

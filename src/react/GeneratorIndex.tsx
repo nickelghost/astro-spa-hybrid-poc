@@ -13,7 +13,7 @@ function GeneratorIndex() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <Link to={`/generator/${name}`}>Generate</Link>
+        <Link to={`/${name}`}>Generate</Link>
       </label>
     </div>
   );
