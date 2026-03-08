@@ -8,7 +8,7 @@ Most pages (`/`, `/about`) are standard Astro pages rendered server-side on ever
 
 The key challenge is SSR: when a user deep-links directly to `/generator/alice`, the server must render the correct React Router view. This is solved by:
 
-1. Caddy rewrites all `/generator/*` paths to `/generator` before forwarding to Astro, while preserving the original path in an `X-Forwarded-Path` header. This can be done inside of Astro with `@astrojs/node` in standalone mode, but Caddy is used here for simplicity and to avoid custom server code.
+1. Caddy rewrites all `/generator/*` paths to `/generator` before forwarding to Astro, while preserving the original path in an `X-Forwarded-Path` header. This can be done inside of Astro, but Caddy is used here for demonstration purposes.
 2. The Astro page reads that header and passes it to `GeneratorApp` as a `path` prop.
 3. `GeneratorApp` uses `StaticRouter` on the server and `BrowserRouter` on the client, both initialized with the correct path, producing consistent SSR output.
 
