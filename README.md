@@ -59,10 +59,3 @@ docker compose up --build
 ```
 
 The app is available at `http://localhost:8080`. Caddy handles path rewriting, so deep-links like `http://localhost:8080/generator/alice` render correctly via SSR.
-
-## Building for production
-
-```bash
-pnpm build
-node dist/server/entry.mjs
-```
