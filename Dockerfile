@@ -4,7 +4,7 @@ WORKDIR /opt/astro-spa-hybrid-poc
 
 COPY . .
 
-RUN npm i -g pnpm && pnpm i && pnpm build
+RUN corepack enable && corepack install && pnpm i && pnpm build
 
 ENV HOST=0.0.0.0
 

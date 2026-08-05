@@ -1,5 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { StaticRouter } from "react-router-dom/server";
+import { BrowserRouter, Route, Routes, StaticRouter } from "react-router-dom";
 import GeneratorIndex from "./GeneratorIndex";
 import GeneratorResult from "./GeneratorResult";
 
